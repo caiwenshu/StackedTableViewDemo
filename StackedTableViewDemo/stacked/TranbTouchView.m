@@ -123,11 +123,20 @@ typedef void(^PSSVSimpleBlock)(void);
 {
 
     NSIndexPath *indexPath = [self.observingScrollView indexPathForSelectedRow];
-    CGRect rect = [self.observingScrollView rectForRowAtIndexPath:indexPath];
     
-    CGPoint offset = self.observingScrollView.contentOffset;
-    offset.y =  (CGRectGetMidY(rect)) - offset.y - (self.pageIndicatorView.height / 2.0f);
-    return offset;
+    if (indexPath != nil) {
+        if ([self.observingScrollView numberOfRowsInSection:indexPath.section] <= indexPath.row) {
+            return CGPointZero;
+        }
+        
+        CGRect rect = [self.observingScrollView rectForRowAtIndexPath:indexPath];
+        
+        CGPoint offset = self.observingScrollView.contentOffset;
+        offset.y =  (CGRectGetMidY(rect)) - offset.y - (self.pageIndicatorView.height / 2.0f);
+        return offset;
+        
+    }
+    return CGPointZero;
 }
 
 
