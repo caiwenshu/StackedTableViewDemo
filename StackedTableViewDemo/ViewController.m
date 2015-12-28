@@ -37,8 +37,8 @@
     self.tranbStackedView.delegate = self;
     [self.view addSubview:self.tranbStackedView];
     
-    //格式化测试
-    //
+    //格式化测试1
+    //格式化测试2
     NSString *sourceFilePath = [[NSBundle mainBundle] pathForResource:@"Industry" ofType:@"json"];
     
     NSData *data =  [NSData dataWithContentsOfFile:sourceFilePath options:NSDataReadingMapped error:nil];
