@@ -273,6 +273,7 @@
 				DB7202EC1AD652720052D4ED /* Sources */,
 				DB7202ED1AD652720052D4ED /* Frameworks */,
 				DB7202EE1AD652720052D4ED /* Resources */,
+				DBC34AB01C31463000DCDC16 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -329,6 +330,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBC34AB01C31463000DCDC16 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/caiwenshu/Documents/GitHub_projects/spacecommander/format-objc-hook";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB7202EC1AD652720052D4ED /* Sources */ = {
@@ -503,6 +521,7 @@
 				DB7203151AD652720052D4ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
